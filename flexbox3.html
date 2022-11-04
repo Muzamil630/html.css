@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox1</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+        }
+        .wrapper>*{
+            padding: 10px;
+            margin: 10px;
+            flex: 1 100%;
+            border-radius: 10px;
+        }
+        
+        .header{
+            background-color: red;
+            height: 100px;
+            background-size: 100%;
+            background-image: url(https://img.freepik.com/free-vector/red-background-with-fireworks-diwali_1017-4459.jpg?size=338&ext=jpg&ga=GA1.2.1502419243.1666239863);
+            background-repeat: no-repeat;
+        }
+        .footer{
+            background-color: aqua;
+            height: 90px;
+            background-image: url(https://img.freepik.com/free-vector/happy-diwali-fireworks-festival-celebration-banner_1017-21467.jpg?size=626&ext=jpg&ga=GA1.2.1502419243.1666239863);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .main{
+           
+            height: 400px;
+            width: 100%;
+            font-size: 24px;
+            background-image: url(https://img.freepik.com/free-photo/festival-lights-symbol-with-candle_23-2149767942.jpg?size=626&ext=jpg);
+            background-repeat: repeat;
+            
+        }
+        .aside{
+            background: orange;
+        }
+
+        @media all and (min-width: 800px){
+            .main{
+                flex: 3;
+            }
+            
+
+            .main{
+                order: 2;
+            }
+            .footer{
+                order: 4;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>MUZAMIL</h1>
+        </header>
+        <article class="main">
+            <h1>HAPPY DIWALI TO ALL FRIENDS AND FAMILLY MEMBERS</h1>
+    </article>
+        
+        
+
+        <footer class="footer">
+            <h1> ONCE AGAIN HAPPY DIWALI</h1>
+        </footer>   
+
+    </div>
+</body>
+</html>
